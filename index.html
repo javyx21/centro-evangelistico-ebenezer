@@ -1,290 +1,107 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Centro Evangelístico Eben-Ezer — Inicio</title>
-  <meta name="description" content="Centro Evangelístico Eben-Ezer. Comunidad de fe comprometida en extender el reino de Dios desde Pochocuape, Nicaragua y las Naciones. Sitio accesible." />
-  <style>
-    /* Paleta accesible (WCAG 2.1 AA) */
-    :root{
-      --fondo: #ffffff;
-      --texto: #111111;
-      --azul-encabezado: #003366;
-      --acento: #FFD700;
-      --gris-claro: #F5F5F5;
-      --max-width: 960px;
-      --radius: 8px;
-      --focus: 3px dashed #ffbf47; /* visible focus */
-      --skip-bg: #003366;
-      --skip-color: #ffffff;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centro Evangelistico Ebenezer - Comarca Pochocuape</title>
 
-    /* Reset ligero */
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      background:var(--fondo);
-      color:var(--texto);
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      line-height:1.45;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      padding:0 1rem;
-      display:flex;
-      justify-content:center;
-    }
+    <!-- Estilos accesibles -->
+    <style>
+        :root {
+            --color-fondo: #ffffff;
+            --color-texto: #111111;
+            --color-primario: #0a3a8d;
+            --color-secundario: #145cc2;
+        }
 
-    .page{
-      width:100%;
-      max-width:var(--max-width);
-    }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
 
-    /* Skip link visible on keyboard focus */
-    .skip-link{
-      position:absolute;
-      left:1rem;
-      top:1rem;
-      background:var(--skip-bg);
-      color:var(--skip-color);
-      padding:0.6rem 0.9rem;
-      border-radius:6px;
-      transform:translateY(-120%);
-    }
-    .skip-link:focus{
-      transform:none;
-      outline:none;
-      box-shadow:0 0 0 4px rgba(0,0,0,0.15);
-    }
+        header {
+            text-align: center;
+            background: var(--color-primario);
+            color: #ffffff;
+            padding: 20px;
+        }
 
-    header{
-      padding:1rem 0 0.5rem 0;
-      display:flex;
-      gap:1rem;
-      align-items:center;
-      justify-content:space-between;
-    }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
 
-    .brand{
-      display:flex;
-      gap:1rem;
-      align-items:center;
-    }
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
 
-    .logo{
-      display:inline-block;
-      width:64px;
-      height:64px;
-      border-radius:8px;
-      overflow:hidden;
-      flex-shrink:0;
-      border:2px solid var(--azul-encabezado);
-      background:var(--gris-claro);
-    }
+        .logo {
+            display: block;
+            margin: 20px auto;
+            max-width: 260px;
+            border-radius: 6px;
+            border: 2px solid var(--color-primario);
+        }
 
-    .logo img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-    }
+        footer {
+            margin-top: 40px;
+            background: var(--color-primario);
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9rem;
+        }
 
-    h1{
-      font-size:1.25rem;
-      margin:0;
-      color:var(--azul-encabezado);
-    }
+        a {
+            color: var(--color-secundario);
+        }
 
-    nav[role="navigation"]{
-      display:flex;
-      gap:0.5rem;
-      align-items:center;
-    }
-
-    .btn{
-      background:var(--azul-encabezado);
-      color:var(--fondo);
-      border:none;
-      padding:0.5rem 0.9rem;
-      border-radius:6px;
-      cursor:pointer;
-      font-weight:600;
-      text-decoration:none;
-      display:inline-block;
-    }
-
-    .btn:focus{
-      outline:none;
-      box-shadow:var(--focus);
-    }
-
-    main{
-      margin-top:1rem;
-      padding:1.25rem;
-      background:linear-gradient(180deg, #ffffff, #ffffff);
-      border-radius:var(--radius);
-    }
-
-    .hero{
-      display:flex;
-      gap:1.25rem;
-      align-items:center;
-      flex-wrap:wrap;
-    }
-
-    .hero .texto{
-      flex:1 1 320px;
-    }
-
-    .hero h2{
-      margin-top:0;
-      margin-bottom:0.5rem;
-      color:var(--azul-encabezado);
-      font-size:1.125rem;
-    }
-
-    .vision{
-      background:var(--gris-claro);
-      padding:0.9rem;
-      border-radius:6px;
-      color:var(--texto);
-      font-size:1rem;
-    }
-
-    /* accesible link focus */
-    a:focus{
-      outline:none;
-      box-shadow:var(--focus);
-    }
-
-    /* footer */
-    footer{
-      margin-top:1.5rem;
-      padding:1rem;
-      font-size:0.9rem;
-      color:#555;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:1rem;
-      flex-wrap:wrap;
-    }
-
-    .meta{
-      font-size:0.85rem;
-    }
-
-    /* Small screens */
-    @media (max-width:520px){
-      .logo{width:56px;height:56px}
-      h1{font-size:1rem}
-      .hero{flex-direction:column}
-    }
-  </style>
+        a:focus,
+        button:focus,
+        input:focus {
+            outline: 3px solid #ffcc00;
+        }
+    </style>
 </head>
+
 <body>
-  <a class="skip-link" href="#main-content">Saltar al contenido</a>
 
-  <div class="page" id="page" role="document">
-    <header role="banner" aria-label="Encabezado del sitio">
-      <div class="brand">
-        <span class="logo" aria-hidden="true">
-          <!-- Reemplaza "ruta-del-logo.png" por el nombre real del archivo del logo -->
-          <img src="ruta-del-logo.png" alt="Logotipo del Centro Evangelístico Ebenezer A/D. Muestra una paloma blanca descendiendo con rayos dorados desde el cielo, un hombre arrodillado en actitud de oración, y una roca con las palabras ‘Piedra de ayuda’. En el borde del círculo aparece el texto: ‘Centro Evangelístico Ebenezer A/D, Comarca Pochocuape’." />
-        </span>
-
-        <div>
-          <h1 id="site-title">Centro Evangelístico Eben-Ezer</h1>
-          <div class="meta" aria-hidden="true">Comarca Pochocuape, Nicaragua</div>
-        </div>
-      </div>
-
-      <nav role="navigation" aria-label="Navegación principal">
-        <a class="btn" href="#acerca-de">Acerca</a>
-        <a class="btn" href="#vision">Visión</a>
-        <a class="btn" href="#contacto">Contacto</a>
-      </nav>
+    <header>
+        <h1>Centro Evangelistico Ebenezer</h1>
+        <h2>Comarca Pochocuape</h2>
     </header>
 
-    <main id="main-content" role="main" tabindex="-1" aria-labelledby="site-title">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="texto">
-          <h2 id="hero-title">Bienvenidos al Centro Evangelístico Eben-Ezer</h2>
-          <p class="vision" id="vision">
-            <strong>Visión:</strong>
+    <main>
+
+        <!-- Imagen del logo con texto alternativo accesible -->
+        <img 
+            src="logo.jpg"
+            alt="Logotipo del Centro Evangelistico Ebenezer. Una paloma blanca desciende con rayos dorados desde el cielo hacia un hombre arrodillado en oración junto a una roca con las palabras ‘Piedra de ayuda’. El borde del logo contiene el nombre Centro Evangelistico Ebenezer y Comarca Pochocuape."
+            class="logo"
+        />
+
+        <h2>Visión</h2>
+        <p>
             Somos una comunidad de fe comprometida en extender el reino de Dios a todas las generaciones, desde Pochocuape, Nicaragua y las Naciones.
-          </p>
-
-          <p style="margin-top:0.75rem;">
-            Sitio web oficial desarrollado con buenas prácticas de accesibilidad. Aquí encontrarás información sobre eventos, formas de contacto y otros recursos para la comunidad.
-          </p>
-
-          <p style="margin-top:0.75rem;">
-            <a class="btn" href="#contacto">Contactar a la iglesia</a>
-          </p>
-        </div>
-
-        <aside aria-labelledby="logo-title" style="min-width:220px;">
-          <h3 id="logo-title" style="font-size:0.95rem;margin:0 0 0.5rem 0;color:var(--azul-encabezado)">Nuestro logo</h3>
-          <figure style="margin:0">
-            <img src="ruta-del-logo.png" alt="Logotipo del Centro Evangelístico Ebenezer A/D. Muestra una paloma blanca descendiendo con rayos dorados desde el cielo, un hombre arrodillado en actitud de oración, y una roca con las palabras ‘Piedra de ayuda’. En el borde del círculo aparece el texto: ‘Centro Evangelístico Ebenezer A/D, Comarca Pochocuape’." width="260" style="border-radius:6px;border:2px solid var(--azul-encabezado)" />
-            <figcaption style="font-size:0.85rem;color:#444;margin-top:0.4rem">Logotipo oficial del Centro Evangelístico Eben-Ezer.</figcaption>
-          </figure>
-        </aside>
-      </section>
-
-      <section id="acerca-de" aria-labelledby="acerca-title" style="margin-top:1.25rem">
-        <h2 id="acerca-title" style="color:var(--azul-encabezado)">Acerca de nosotros</h2>
-        <p>
-          El Centro Evangelístico Eben-Ezer es una comunidad de fe que ofrece culto, enseñanza bíblica y apoyo social en la Comarca Pochocuape. Promovemos actividades intergeneracionales, formación y proyectos de servicio comunitario.
         </p>
 
-        <h3 style="color:var(--azul-encabezado)">Eventos y reuniones</h3>
-        <p>
-          Consulta nuestro calendario de actividades para los servicios, grupos de estudio y programas de ayuda comunitaria.
+        <h2>Contacto</h2>
+        <p>Correo electrónico: 
+            <a href="mailto:info@franklinaccesible.com">
+                info@franklinaccesible.com
+            </a>
         </p>
-      </section>
-
-      <section id="contacto" aria-labelledby="contacto-title" style="margin-top:1.25rem">
-        <h2 id="contacto-title" style="color:var(--azul-encabezado)">Contacto</h2>
-        <p>Para más información, escríbenos o visítanos en nuestras redes.</p>
-        <address>
-          <strong>Ubicación:</strong> Comarca Pochocuape, Nicaragua.<br />
-          <strong>Correo:</strong> <a href="mailto:info@centroevangelisticoebenezer.com">info@centroevangelisticoebenezer.com</a>
-        </address>
-      </section>
     </main>
 
-    <footer role="contentinfo">
-      <div>
-        <span aria-hidden="true">© </span>
-        <span id="anio" aria-hidden="true"></span>
-        <span> Centro Evangelístico Eben-Ezer. </span>
-        <span>Todos los derechos reservados.</span>
-      </div>
-
-      <div style="text-align:right">
-        <a href="/privacy" style="color:var(--texto);text-decoration:underline">Política de privacidad</a>
-      </div>
+    <footer>
+        © 2025 Centro Evangelistico Ebenezer. Todos los derechos reservados.
     </footer>
-  </div>
 
-  <script>
-    // Poner año actual accesible
-    (function(){
-      var y = new Date().getFullYear();
-      var el = document.getElementById('anio');
-      if(el){ el.textContent = y; }
-    })();
-
-    // Mejora de accesibilidad: al hacer clic en el skip link, el foco va al main
-    document.querySelectorAll('.skip-link').forEach(function(link){
-      link.addEventListener('click', function(e){
-        var target = document.getElementById('main-content');
-        if(target){ target.setAttribute('tabindex','-1'); target.focus(); }
-      });
-    });
-  </script>
 </body>
 </html>
