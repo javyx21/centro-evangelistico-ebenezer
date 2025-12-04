@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro Evangelistico Ebenezer - Comarca Pochocuape</title>
 
-    <!-- Estilos accesibles -->
     <style>
         :root {
-            --color-fondo: #ffffff;
-            --color-texto: #111111;
-            --color-primario: #0a3a8d;
-            --color-secundario: #145cc2;
+            --azul: #0a3a8d;
+            --azul-claro: #145cc2;
+            --fondo: #ffffff;
+            --texto: #111111;
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: var(--color-fondo);
-            color: var(--color-texto);
             margin: 0;
-            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--fondo);
+            color: var(--texto);
             line-height: 1.6;
         }
 
         header {
+            background: var(--azul);
+            padding: 25px 15px;
             text-align: center;
-            background: var(--color-primario);
-            color: #ffffff;
-            padding: 20px;
+            color: white;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2rem;
+            font-size: 2.3rem;
+        }
+
+        header h2 {
+            margin: 5px 0 0;
+            font-size: 1.3rem;
+            font-weight: normal;
         }
 
         main {
@@ -45,63 +49,114 @@
             display: block;
             margin: 20px auto;
             max-width: 260px;
+            border: 2px solid var(--azul);
             border-radius: 6px;
-            border: 2px solid var(--color-primario);
+        }
+
+        h2 {
+            color: var(--azul);
+            border-left: 5px solid var(--azul);
+            padding-left: 10px;
+            margin-top: 40px;
+        }
+
+        .caja {
+            background: #f4f4f4;
+            padding: 15px;
+            border-left: 4px solid var(--azul);
+            border-radius: 4px;
+            margin-bottom: 25px;
         }
 
         footer {
             margin-top: 40px;
-            background: var(--color-primario);
-            color: #ffffff;
+            background: var(--azul);
+            color: white;
             text-align: center;
             padding: 15px;
             font-size: 0.9rem;
         }
 
         a {
-            color: var(--color-secundario);
+            color: var(--azul-claro);
+            text-decoration: none;
         }
 
-        a:focus,
-        button:focus,
-        input:focus {
+        a:focus {
             outline: 3px solid #ffcc00;
         }
     </style>
 </head>
-
 <body>
 
-    <header>
-        <h1>Centro Evangelistico Ebenezer</h1>
-        <h2>Comarca Pochocuape</h2>
-    </header>
+<header>
+    <h1>Centro Evangelistico Ebenezer</h1>
+    <h2>Comarca Pochocuape</h2>
+</header>
 
-    <main>
+<main>
 
-        <!-- Imagen del logo con texto alternativo accesible -->
-        <img 
-            src="logo.jpg"
-            alt="Logotipo del Centro Evangelistico Ebenezer. Una paloma blanca desciende con rayos dorados desde el cielo hacia un hombre arrodillado en oración junto a una roca con las palabras ‘Piedra de ayuda’. El borde del logo contiene el nombre Centro Evangelistico Ebenezer y Comarca Pochocuape."
-            class="logo"
-        />
+    <!-- LOGO -->
+    <img 
+        src="logo.jpg" 
+        alt="Logotipo del Centro Evangelistico Ebenezer. Una paloma blanca desciende con rayos dorados desde el cielo hacia un hombre arrodillado en oración junto a una roca con las palabras ‘Piedra de ayuda’. El borde del logo contiene el nombre Centro Evangelistico Ebenezer y Comarca Pochocuape."
+        class="logo"
+    />
 
-        <h2>Visión</h2>
-        <p>
-            Somos una comunidad de fe comprometida en extender el reino de Dios a todas las generaciones, desde Pochocuape, Nicaragua y las Naciones.
-        </p>
+    <div class="caja">
+        <strong>“Hasta aquí nos ayudó Jehová” — 1 Samuel 7:12</strong>
+    </div>
 
-        <h2>Contacto</h2>
-        <p>Correo electrónico: 
-            <a href="mailto:info@franklinaccesible.com">
-                info@franklinaccesible.com
-            </a>
-        </p>
-    </main>
+    <h2>Bienvenido</h2>
+    <p>
+        El Centro Evangelistico Ebenezer es un lugar donde cada vida importa, donde cada familia encuentra apoyo,
+        y donde cada corazón es guiado a los pies de Cristo. Somos una iglesia que cree en el poder transformador
+        del Espíritu Santo, en la verdad eterna de la Palabra de Dios y en el amor que une a la comunidad.
+    </p>
 
-    <footer>
-        © 2025 Centro Evangelistico Ebenezer. Todos los derechos reservados.
-    </footer>
+    <p>
+        Nuestro deseo es ser luz en Pochocuape, en Nicaragua y en las naciones, caminando juntos en fe,
+        esperanza y servicio. Aquí encontrarás un espacio para crecer espiritualmente, restaurar tu hogar,
+        fortalecer tu relación con Dios y descubrir el propósito para el cual fuiste creado.
+    </p>
+
+    <h2>Visión</h2>
+    <p>
+        Somos una comunidad de fe comprometida en extender el reino de Dios a todas las generaciones, 
+        desde Pochocuape, Nicaragua y las Naciones.
+    </p>
+
+    <h2>Misión</h2>
+    <p>
+        Proclamar el evangelio de Jesucristo con amor, excelencia y obediencia, formando discípulos fuertes,
+        familias restauradas y una comunidad que refleje la presencia de Dios en cada área de la vida.
+    </p>
+
+    <h2>Quiénes somos</h2>
+    <p>
+        Somos una iglesia cristiana de sana doctrina, dedicada a la enseñanza bíblica, la oración, la adoración
+        y el servicio a la comunidad. Buscamos ser una familia espiritual sólida donde cada persona pueda
+        desarrollar sus dones, crecer en santidad y servir conforme al llamado que Dios ha puesto en su corazón.
+    </p>
+
+    <h2>Valores</h2>
+    <ul>
+        <li>Amor y servicio</li>
+        <li>Integridad y responsabilidad</li>
+        <li>Unidad en Cristo</li>
+        <li>Oración y dependencia de Dios</li>
+        <li>Evangelismo y discipulado</li>
+    </ul>
+
+    <h2>Contacto</h2>
+    <p>Correo electrónico: 
+        <a href="mailto:info@franklinaccesible.com">info@franklinaccesible.com</a>
+    </p>
+</main>
+
+<footer>
+    © 2025 Centro Evangelistico Ebenezer. Todos los derechos reservados.
+</footer>
 
 </body>
 </html>
